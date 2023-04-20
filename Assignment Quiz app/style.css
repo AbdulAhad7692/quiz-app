@@ -1,0 +1,93 @@
+.body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-div {
+    display: block;
+    height: 350px;
+    width: 600px;
+    background: rgb(34, 35, 94);
+    background: linear-gradient(150deg, rgb(0, 154, 174) 0%, rgb(0, 63, 139) 100%);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.quiz-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top-heading {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    margin: 0%;
+}
+
+.question-div {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.question {
+    margin-left: 10%;
+    color: white;
+    font-size: 22px;
+}
+
+.answer-div {
+    width: 300px;
+}
+
+.li-text {
+    color: white;
+    font-size: 20px;
+    list-style: none;
+    margin-top: 5px;    
+}
+.list-div{
+    height: 35px;
+    width: 200px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.list-div:hover{
+    height: 35px;
+    width: 200px;
+    background-color: rgba(0, 40, 86, 0.3);
+    border: 2px solid rgb(162, 230, 255);
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.btn {
+    margin-left: 40%;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: none;
+    background-color: #5dbcd2;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3697a8;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+@media only screen and (max-width:600px) {
+    .main-div{
+        background-color: none;
+    }
+}
