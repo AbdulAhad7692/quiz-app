@@ -1,5 +1,8 @@
 
 
+/////___QUIZ APP___///////
+
+
 
 let questions = [
     {
@@ -9,7 +12,8 @@ let questions = [
         option3: "Venus",
         option4: "Mercury",
         answer: "Mars"
-    },
+    }
+    ,
     {
         question: "What is the chemical symbol for gold?",
         option1: "Go",
@@ -92,6 +96,8 @@ let option4 = document.getElementById('option4')
 let index = 0;
 let score = 0;
 
+
+
 function nextQuestion() {
 
     let option = document.getElementsByName('answer')
@@ -110,13 +116,15 @@ function nextQuestion() {
         option[i].checked = false;
         btn.disabled = true;
 
-
     }
 
 
+
     if (index >= questions.length) {
-        console.log('question End');
-        console.log((score * 100) / 10 + "%");
+        let nextBtn = document.getElementById('btn');
+        nextBtn.style.display = 'none';
+        let resultBtn = document.getElementById('modalBox');
+        resultBtn.style.display = 'block'
     }
     else {
         ques.innerText = questions[index].question;
@@ -124,16 +132,35 @@ function nextQuestion() {
         option2.innerHTML = questions[index].option2
         option3.innerHTML = questions[index].option3
         option4.innerHTML = questions[index].option4
+        heading.innerHTML = `Question no : ${index + 1}`;
         index++
     }
+    let result = ((score * 100) / 10);
+    console.log(result)
+    const modalDiv = document.getElementById('modalDiv');
+    const resultHeading = document.getElementById('resultHeading');
+
+    resultHeading.innerText = `Your result is :  ${result} %`;
 }
 
 nextQuestion();
+
+//__Modal box__//
+
+document.getElementById('modalBox').addEventListener('click', function () {
+    document.querySelector('.modal').style.display = 'flex';
+})
+
+const modalDiv = document.getElementById('modalDiv');
+const resultHeading = document.getElementById('resultHeading');
+
+//__funtion to enable a btn__//
 
 function enablebtn() {
     let btn = document.getElementById('btn');
     btn.disabled = false;
 }
+
 let min = 1
 let sec = 59
 

@@ -5,59 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 
-<body>
-    <div class="quiz-box">
-        <div class="question-style">
-            <span id="timer"></span>
-            <p id="question"></p>
-        </div>
-        <div class="answer-style">
-            <div>
-                <label>
-                    <input onclick="enablebtn()" value="1" type="radio" name="answer">
-                    <span id="option1"></span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input onclick="enablebtn()" value="2" type="radio" name="answer">
-                    <span id="option2"></span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input onclick="enablebtn()" value="3" type="radio" name="answer">
-                    <span id="option3"></span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input onclick="enablebtn()" value="4" type="radio" name="answer">
-                    <span id="option4"></span>
-                </label>
-            </div>
+<body class="body">
 
-
-            <button id="btn" disabled class="btn-style" onclick="nextQuestion()">
-                Next
+    <div class="box">
+        <div class="form">
+            <h2>Login</h2>
+            <img src="adi.jpg" class="img" alt="">
+            <div class="input-box">
+                <input type="text" required="required" id="">
+                <span>Username : </span>
+                <i></i>
+            </div>
+            <div class="input-box">
+                <input type="password" required="required" id="">
+                <span>Password : </span>
+                <i></i>
+            </div>
+            <button class="btn">
+                Login
             </button>
-
-
         </div>
-
-
     </div>
 
 
-
-
-
-    <script src="app.js"></script>
-
+    <script src="login.js"></script>
 </body>
 
 </html>
+
+
+
